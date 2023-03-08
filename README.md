@@ -89,3 +89,17 @@ SQuAD 2.0 adds the possibility that the answer to the question does not exist wi
 The Situations With Adversarial Generations (SWAG) dataset is a collection of 113,000 examples of common-sense inference problems. Given a sentence, BERT should choose the most likely continuation. The input to BERT was four different sequences, each a concatenation of the prompt sentence and a possible continuation. BERT's performance on SWAG is shown below.
 
 <img src="https://user-images.githubusercontent.com/59686399/223651982-6893dc09-c804-4301-8368-af3b71a1684a.png" width="250" />
+
+### Ablation
+Broadly speaking, ablation is testing to detetrmine the impact of an aspect by removing it and observing the changes. The authors investigate the effects of altering three aspects of BERT:
+
+#### Effect of Pre-Training Tasks
+Using the same data, fine-tuning scheme, and hyperparameters, base BERT was compared to a version with an MLM but no NSP training, and to another version that has no NSP training and replaces the MLM with a Left-To-Right (LTR) language model. The results are described below, along with a table.
+  - Removing NSP hurt performance significantly on 3 of the 5 tasks
+  - After removing NSP, swapping MLM for LTR hurt performance extremely on 2 of the 5 tasks and significantly on one
+  - For SQuAD, attempted to give it a fair shot by adding a randomly initialized bidirectional LSTM
+    - Improved performance heavily, but still significantly worse than pre-trained bidirectional model
+
+<img src="https://user-images.githubusercontent.com/59686399/223673753-884d4ee1-916b-4ad8-9b7f-350337b5ad09.png" width="350" />
+
+#### Effect of Model Size
