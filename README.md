@@ -90,6 +90,8 @@ The Situations With Adversarial Generations (SWAG) dataset is a collection of 11
 
 <img src="https://user-images.githubusercontent.com/59686399/223651982-6893dc09-c804-4301-8368-af3b71a1684a.png" width="250" />
 
+<br>
+
 ### Ablation
 Broadly speaking, ablation is testing to detetrmine the impact of an aspect by removing it and observing the changes. The authors investigate the effects of altering three aspects of BERT:
 
