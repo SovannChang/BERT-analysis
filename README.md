@@ -110,3 +110,12 @@ To test the effects of changing the model's size, BERT was run 6 times with diff
 <img src="https://user-images.githubusercontent.com/59686399/223778044-b2b28efa-ebfb-418d-9927-cd131bc1ba3f.png" width="350" />
 
 This analysis showed that larger models led to better performance on large-scale tasks, which was already known when this was published. However, it also showed that if a model has bee sufficiently pre-trained, very small-scale tasks can also see significant improvements when the model is scaled up.
+
+#### Feature-based Approach
+The authors experimented with switching BERT to use a feature-based approach, where the pre-trained model produces features that remain unchanged when being passed to the downstream model. One advantage of this approach is that some tasks require task-specific architecture, and can't be easily represented by a transformer encoder architecture. Feature-based learning is also more efficient than fine-tuning, since the representations of the training data are pre-computed only once and other, cheaper models run on those.
+
+To test the feature-based BERT, the authors used the CoNLL-2003 Named Entity Recognition (NER) dataset. CoNLL-2003 contains around 20,000 examples of sentences containing named entities, and the BERT's job was to identify which words refer to named entities. The results of the testing are shown in the table below.
+
+<img src="https://user-images.githubusercontent.com/59686399/223785939-55a2e4cc-30f8-415c-8b0e-be3684e615a6.png" width="350" />
+
+The table shows that the best feature-based approach performs nearly as well as the fine-tuning approaches, which means that BERT is as effective when using feature-based learning as when it uses fine-tuning.
