@@ -3,7 +3,10 @@
 #### Analysis done by Sovann Chang
 
 # Overview
-### Term Background
+### Conceptual Background
+Feature-based approach vs. Fine-tuning approach
+  - In a feature-based approach, model A is trained, and its representations are used as an input to model B, which is downstream from model A.
+  - In a fine-tuning approach, model A is trained, and model B (downstream from A) is refined by tweaking model A's parameters, adjusting the entire system.
 
 ### Transformers Before BERT
 Before BERT, there were two types of transformers:
@@ -14,4 +17,9 @@ Before BERT, there were two types of transformers:
 ![Model Architectures](https://user-images.githubusercontent.com/59686399/223591492-69761df3-d0fc-4439-846f-a8df4fffb62b.png)
 
 ### How BERT Surpasses These Models
-BERT 
+BERT incorporates a Masked Language Model (MLM) into its pre-training. The MLM randomly masks some of the input tokens and tries to predict the missing tokens from the surrounding context. This allows the model to use context from both sides of the target token when making predictions. BERT also uses Next Sentence Prediction (NSP) as a part of its pre-training.
+
+### The Inner Workings of BERT
+BERT's framework consists of two steps. The first is pre-training, done on unlabeled data over different tasks. In the second step, the BERT model is initialized with the pre-trained parameters, and all of the parameters are altered using labeled data from the downstream tasks. Each downstream task has separate models, even though they are initialized with the same pre-trained parameters.
+
+### QUESTION: Is this second step a feature-based approach, or a fine-tuning approach?
