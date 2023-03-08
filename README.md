@@ -78,15 +78,14 @@ The General Language Understanding Evaluation (GLUE) dataset is "a collection of
 ###### SQuAD 1.1
 The Stanford Question Answering (SQuAD) dataset is contains 100,000 crowd-sourced question/answer pairs, with the questions asked about passages drawn from Wikipedia. The other models that BERT is being compared to were allowed to be trained on any data, so to even the playing field, BERT was first trained on TriviaQA, another 650,000 question/answer pairs. BERT's performance on SQuAD 1.1 is shown below.
 
-![image](https://user-images.githubusercontent.com/59686399/223651809-398c47d9-051d-4e5f-ac8a-708b26096201.png)
+<img src="https://user-images.githubusercontent.com/59686399/223651809-398c47d9-051d-4e5f-ac8a-708b26096201.png" width="350" />
 
 ###### SQuAD 2.0
 SQuAD 2.0 adds the possibility that the answer to the question does not exist within the context in order to mimic reality. This time, BERT was not trained on TriviaQA first. BERT was also given a larger batch size and fewer epochs than when it was run on SQuAD 1.1. BERT's performance on SQuAD 2.0 is shown below.
 
-![image](https://user-images.githubusercontent.com/59686399/223651898-c272fff1-8b78-44fa-972c-55e2ccbe94ed.png)
-
+<img src="https://user-images.githubusercontent.com/59686399/223651898-c272fff1-8b78-44fa-972c-55e2ccbe94ed.png" width="350" />
 
 ###### SWAG
 The Situations With Adversarial Generations (SWAG) dataset is a collection of 113,000 examples of common-sense inference problems. Given a sentence, BERT should choose the most likely continuation. The input to BERT was four different sequences, each a concatenation of the prompt sentence and a possible continuation. BERT's performance on SWAG is shown below.
 
-![image](https://user-images.githubusercontent.com/59686399/223651982-6893dc09-c804-4301-8368-af3b71a1684a.png)
+<img src="https://user-images.githubusercontent.com/59686399/223651982-6893dc09-c804-4301-8368-af3b71a1684a.png" width="250" />
