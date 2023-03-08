@@ -119,3 +119,7 @@ To test the feature-based BERT, the authors used the CoNLL-2003 Named Entity Rec
 <img src="https://user-images.githubusercontent.com/59686399/223785939-55a2e4cc-30f8-415c-8b0e-be3684e615a6.png" width="350" />
 
 The table shows that the best feature-based approach performs nearly as well as the fine-tuning approaches, which means that BERT is as effective when using feature-based learning as when it uses fine-tuning.
+
+# Conclusion
+Before BERT, rich, unsupervised pre-training had been shown to improve low-resource tasks using unidirectional models. BERT took this concept and applied it to a more powerful, bidirectional model. It showed that pre-trained representations could outperform task-specific architectures for both sentence-level and token-level tasks. BERT surpassed all other models on most tasks, and still performed well when its fine-tuning was replaced with feature-based learning.
+
