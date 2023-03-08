@@ -38,6 +38,22 @@ BERT has two main model sizes:
   - BERT large 
     - 24 transformer layers, 1024-dimensional hidden vector, 16 attention heads 
     - 340 million parameters
+
+### Inputs
+The entire input is represented as one sequence. Different sentences (e.g. question/answer) are separated using the [SEP] token. Learned embeddings that represent which sentence the token is in are added to the tokens.
     
 ### Pre-Training
+As stated above, BERT is trained on a Masked Language Model and Next Sentence Prediction
 
+##### Data
+There are two primary datasets used in pre-training:
+- BooksCorpus contains around 800 million words
+- English Wikipedia contains around 2.5 billion words
+  - Only the article text is used. not headers, lists, tables, etc.
+
+It is importatnt to use document-level data instead of "shuffled sentence-level" data because it allows the model "to extract long, contiguous sequences."
+
+###### MLM
+The MLM randomly sets aside 15% of the input tokens. Because fine-tuning won't involve [MASK] tokens, the selected tokens are not all replaced with [MASK] tokens in order to reduce the mismatch between the tasks. Of the 15% set aside, 80% are replaced by [MASK], 10% are replaced by a random token, and 10% are unchanged. The advantage of this is that the transformer does not know which words have been replaced, so it cannot discard any token representations. After the tokens are replaced, the hidden vectors are used to predict the original tokens.
+
+###### NSP
