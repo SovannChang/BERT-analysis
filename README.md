@@ -2,6 +2,8 @@
 ### Original Authors Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova
 #### Analysis by Sovann Chang
 
+Link to the paper: https://arxiv.org/abs/1810.04805
+
 # Background
 ### Conceptual Background
 Feature-based approach vs. Fine-tuning approach
