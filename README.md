@@ -99,9 +99,14 @@ Broadly speaking, ablation is testing to detetrmine the impact of an aspect by r
 Using the same data, fine-tuning scheme, and hyperparameters, base BERT was compared to a version with an MLM but no NSP training, and to another version that has no NSP training and replaces the MLM with a Left-To-Right (LTR) language model. The results are described below, along with a table.
   - Removing NSP hurt performance significantly on 3 of the 5 tasks
   - After removing NSP, swapping MLM for LTR hurt performance extremely on 2 of the 5 tasks and significantly on one
-  - For SQuAD, attempted to give it a fair shot by adding a randomly initialized bidirectional LSTM
+  - For SQuAD, the authors attempted to give it a fair shot by adding a randomly initialized bidirectional LSTM
     - Improved performance heavily, but still significantly worse than pre-trained bidirectional model
 
 <img src="https://user-images.githubusercontent.com/59686399/223673753-884d4ee1-916b-4ad8-9b7f-350337b5ad09.png" width="350" />
 
 #### Effect of Model Size
+To test the effects of changing the model's size, BERT was run 6 times with different hyperparameters. The tested hyperparameters were the number of transformer layers (L), the dimension of the hidden vector (H), and the number of attention heads (A). The results are shown in the table below. BERT base is the fourth row, and BERT large is the last row.
+
+<img src="https://user-images.githubusercontent.com/59686399/223778044-b2b28efa-ebfb-418d-9927-cd131bc1ba3f.png" width="350" />
+
+This analysis showed that larger models led to better performance on large-scale tasks, which was already known when this was published. However, it also showed that if a model has bee sufficiently pre-trained, very small-scale tasks can also see significant improvements when the model is scaled up.
