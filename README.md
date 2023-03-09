@@ -124,7 +124,7 @@ To test the effects of changing the model's size, BERT was run 6 times with diff
 
 <img src="https://user-images.githubusercontent.com/59686399/223778044-b2b28efa-ebfb-418d-9927-cd131bc1ba3f.png" width="350" />
 
-This analysis showed that larger models led to better performance on large-scale tasks, which was already known when this was published. However, it also showed that if a model has bee sufficiently pre-trained, very small-scale tasks can also see significant improvements when the model is scaled up.
+This analysis showed that larger models led to better performance on large-scale tasks, which was already known when this was published. However, it also showed that if a model has been sufficiently pre-trained, very small-scale tasks can also see significant improvements when the model is scaled up.
 
 #### Feature-based Approach
 The authors experimented with switching BERT to use a feature-based approach, where the pre-trained model produces features that remain unchanged when being passed to the downstream model. 
