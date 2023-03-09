@@ -1,5 +1,5 @@
 # BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (2018)
-### Original Authors Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova
+### Original authors Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova
 #### Analysis by Sovann Chang
 
 Link to the paper: https://arxiv.org/abs/1810.04805
