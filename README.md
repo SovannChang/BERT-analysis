@@ -123,6 +123,8 @@ The table shows that the best feature-based approach performs nearly as well as 
 # Conclusion
 Before BERT, rich, unsupervised pre-training had been shown to improve low-resource tasks using unidirectional models. BERT took this concept and applied it to a more powerful, bidirectional model. It showed that pre-trained representations could outperform task-specific architectures for both sentence-level and token-level tasks. BERT surpassed all other models on most tasks, and still performed well when its fine-tuning was replaced with feature-based learning.
 
+<br>
+
 # Links To Further Resources
   - BERT repository - https://github.com/google-research/bert
   - BERT Huggingface page - https://huggingface.co/bert-base-uncased
