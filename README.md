@@ -91,7 +91,7 @@ The General Language Understanding Evaluation (GLUE) dataset is "a collection of
 ![image](https://user-images.githubusercontent.com/59686399/223651737-e9b95895-014a-4e8c-92f1-62f4bd794206.png)
 
 ###### SQuAD 1.1
-The Stanford Question Answering (SQuAD) dataset is contains 100,000 crowd-sourced question/answer pairs, with the questions asked about passages drawn from Wikipedia. The other models that BERT is being compared to were allowed to be trained on any data, so to even the playing field, BERT was first trained on TriviaQA, another 650,000 question/answer pairs. BERT's performance on SQuAD 1.1 is shown below.
+The Stanford Question Answering (SQuAD) dataset contains 100,000 crowd-sourced question/answer pairs, with the questions asked about passages drawn from Wikipedia. The other models that BERT is being compared to were allowed to be trained on any data, so to even the playing field, BERT was first trained on TriviaQA, another 650,000 question/answer pairs. BERT's performance on SQuAD 1.1 is shown below.
 
 <img src="https://user-images.githubusercontent.com/59686399/223651809-398c47d9-051d-4e5f-ac8a-708b26096201.png" width="350" />
 
