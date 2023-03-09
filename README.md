@@ -139,6 +139,9 @@ The table shows that the best feature-based approach performs nearly as well as 
 # Conclusion
 Before BERT, rich, unsupervised pre-training had been shown to improve low-resource tasks using unidirectional models. BERT took this concept and applied it to a more powerful, bidirectional model. It showed that pre-trained representations could outperform task-specific architectures for both sentence-level and token-level tasks. BERT surpassed all other models on most tasks, and still performed well when its fine-tuning was replaced with feature-based learning.
 
+#### Criticism
+The authors chose not to detail the architecture of BERT, instead referencing a separate paper (Attention is All You Need) and suggesting the reader look there instead, since their implementation is "almost identical to the original." Personally, I think that it would have been useful for them to include at least a high-level overview and a diagram so that interested readers could get a general idea of how it worked rather than being stuck with the options of "read another paper" or "accept that you won't know how it's structured." As far as I can tell, the paper was very widely acepted. I could not find any disputes, and BERT has been cited over 60,000 times and is used as the basis for many newer models.
+
 <br>
 
 ## Links To Further Resources
