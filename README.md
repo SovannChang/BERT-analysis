@@ -29,12 +29,20 @@ BERT incorporates a Masked Language Model (MLM) into its pre-training. The MLM r
 ### The Inner Workings of BERT
 BERT's framework consists of two steps. The first is pre-training, done on unlabeled data over different tasks. In the second step, the BERT model is initialized with the pre-trained parameters, and all of the parameters are altered using labeled data from the downstream tasks. Each downstream task has separate models, even though they are initialized with the same pre-trained parameters.
 
+<br>
+
 ### QUESTION: Is this second step a feature-based approach, or a fine-tuning approach?
 
 <br>
 
 ### Architecture
 BERT uses near-identical architecture for the pre-trained model and downstream models. 
+
+![image](https://user-images.githubusercontent.com/59686399/223914863-82ab937d-f926-4d35-9e3f-4d4c4cbcc2c5.png)
+The BERT architecture (credit towardsdatascience)
+
+<br>
+
 BERT has two main model sizes: 
   - BERT base 
     - 12 transformer layers, 768-dimensional hidden vector, 12 attention heads
@@ -112,7 +120,15 @@ To test the effects of changing the model's size, BERT was run 6 times with diff
 This analysis showed that larger models led to better performance on large-scale tasks, which was already known when this was published. However, it also showed that if a model has bee sufficiently pre-trained, very small-scale tasks can also see significant improvements when the model is scaled up.
 
 #### Feature-based Approach
-The authors experimented with switching BERT to use a feature-based approach, where the pre-trained model produces features that remain unchanged when being passed to the downstream model. One advantage of this approach is that some tasks require task-specific architecture, and can't be easily represented by a transformer encoder architecture. Feature-based learning is also more efficient than fine-tuning, since the representations of the training data are pre-computed only once and other, cheaper models run on those.
+The authors experimented with switching BERT to use a feature-based approach, where the pre-trained model produces features that remain unchanged when being passed to the downstream model. 
+
+<br>
+
+### QUESTION: What is a potential advantage of a feature-based approach?
+
+<br><br>
+
+One advantage of this approach is that some tasks require task-specific architecture, and can't be easily represented by a transformer encoder architecture. Feature-based learning is also more efficient than fine-tuning, since the representations of the training data are pre-computed only once and other, cheaper models run on those.
 
 To test the feature-based BERT, the authors used the CoNLL-2003 Named Entity Recognition (NER) dataset. CoNLL-2003 contains around 20,000 examples of sentences containing named entities, and the BERT's job was to identify which words refer to named entities. The results of the testing are shown in the table below.
 
