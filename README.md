@@ -149,7 +149,7 @@ Before BERT, rich, unsupervised pre-training had been shown to improve low-resou
 #### Criticism
 The authors chose not to detail the architecture of BERT, instead referencing a separate paper (Attention is All You Need) and suggesting the reader look there instead, since their implementation is "almost identical to the original." Personally, I think that it would have been useful for them to include at least a high-level overview and a diagram so that interested readers could get a general idea of how it worked rather than being stuck with the options of "read another paper" or "accept that you won't know how it's structured." 
 
-As far as I can tell, the paper was very widely acepted. I could not find any other authors who disputed any of the paper. It has been cited over 60,000 times, and BERT has been used as the basis for many newer models.
+As far as I can tell, the paper was very widely accepted. I could not find any other authors who disputed any of the paper. It has been cited over 60,000 times, and BERT has been used as the basis for many newer models.
 
 <br>
 
