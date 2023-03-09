@@ -16,13 +16,20 @@ Before BERT, there were two types of transformers:
   - Models like OpenAI GPT were powerful, but only used unidirectional attention, meaning that the target token could only get context from tokens preceding OR following it - not both.
   - Models like ELMo separately trained forward (left to right) and backward (right to left) unidirectional language models, concatenating their representations of the target token after training. This allowed the target token to attend to tokens before and after it, but was twice as expensive as a single model, and only provided a shallow representation of the token.
 
-![Model Architectures](https://user-images.githubusercontent.com/59686399/223591492-69761df3-d0fc-4439-846f-a8df4fffb62b.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/59686399/223591492-69761df3-d0fc-4439-846f-a8df4fffb62b.png" />
+<p>
 
 <br>
 
 #  BERT
 ### How BERT Surpasses These Models
 BERT incorporates a Masked Language Model (MLM) into its pre-training. The MLM randomly masks some of the input tokens and tries to predict the missing tokens from the surrounding context. This allows the model to use context from both sides of the target token when making predictions. BERT also uses Next Sentence Prediction (NSP) as a part of its pre-training.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/59686399/223962799-9e6616db-4606-4d12-a552-1bf59a38b162.png" width="300" />
+</p>
+
 
 <br>
 
