@@ -125,7 +125,7 @@ Before BERT, rich, unsupervised pre-training had been shown to improve low-resou
 
 <br>
 
-# Links To Further Resources
+## Links To Further Resources
   - BERT repository - https://github.com/google-research/bert
   - BERT Huggingface page - https://huggingface.co/bert-base-uncased
   - Transformer implementation and architecture - https://arxiv.org/abs/1706.03762
