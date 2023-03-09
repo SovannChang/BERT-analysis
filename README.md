@@ -70,7 +70,7 @@ As stated above, BERT is trained on a Masked Language Model and Next Sentence Pr
 There are two primary datasets used in pre-training:
 - BooksCorpus contains around 800 million words
 - English Wikipedia contains around 2.5 billion words
-  - Only the article text is used. not headers, lists, tables, etc.
+  - Only the article text is used, not headers, lists, tables, etc.
 
 It is importatnt to use document-level data instead of "shuffled sentence-level" data because it allows the model "to extract long, contiguous sequences."
 
@@ -78,7 +78,7 @@ It is importatnt to use document-level data instead of "shuffled sentence-level"
 The Masked Language Model randomly sets aside 15% of the input tokens. Because fine-tuning won't involve [MASK] tokens, the selected tokens are not all replaced with [MASK] tokens in order to reduce the mismatch between the tasks. Of the 15% set aside, 80% are replaced by [MASK], 10% are replaced by a random token, and 10% are unchanged. The advantage of this is that the transformer does not know which words have been replaced, so it cannot discard any token representations. After the tokens are replaced, the hidden vectors are used to predict the original tokens.
 
 ###### NSP
-Next Sentence Prediction is pretty simple. The model is shown 2 sentences: Sentence A and Sentence B. Half of the time, Sentence B is the acatual sentence following Sentence A in the text, and half of the time, it is a random sentence. The model must decide which is the truth. The purpose of NSP is to capture the relationship between sentences.
+Next Sentence Prediction is pretty simple. The model is shown 2 sentences: Sentence A and Sentence B. Half of the time, Sentence B is the actual sentence following Sentence A in the text, and half of the time, it is a random sentence. The model must decide which is the truth. The purpose of NSP is to capture the relationship between sentences.
 
 <br>
 
@@ -108,7 +108,7 @@ The Situations With Adversarial Generations (SWAG) dataset is a collection of 11
 <br>
 
 ### Ablation
-Broadly speaking, ablation is testing to detetrmine the impact of an aspect by removing it and observing the changes. The authors investigate the effects of altering three aspects of BERT:
+Broadly speaking, ablation is testing to determine the impact of an aspect by removing it and observing the changes. The authors investigate the effects of altering three aspects of BERT:
 
 #### Effect of Pre-Training Tasks
 Using the same data, fine-tuning scheme, and hyperparameters, base BERT was compared to a version with an MLM but no NSP training, and to another version that has no NSP training and replaces the MLM with a Left-To-Right (LTR) language model. The results are described below, along with a table.
